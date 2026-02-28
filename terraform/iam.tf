@@ -23,7 +23,7 @@ resource "aws_iam_role_policy_attachment" "lambda_basic_exec" {
 resource "aws_lambda_permission" "api_gateway" {
   statement_id  = "AllowAPIGatewayInvoke"
   action        = "lambda:InvokeFunction"
-  function_name = aws_lambda_function.example_lambda.function_name
+  function_name = aws_lambda_function.first_lambda_function.function_name
   principal     = "apigateway.amazonaws.com"
   source_arn    = "${aws_apigatewayv2_api.lambda_api.execution_arn}/*/*"
 }
