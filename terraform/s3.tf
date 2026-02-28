@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "sukas-my-new-bucket"   # must be globally unique
+  bucket = "sukas-my-new-bucket" # must be globally unique
 
   tags = {
     Name        = "MyNewBucket"
